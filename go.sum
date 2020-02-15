@@ -1,4 +1,8 @@
 github.com/MaxHalford/halfgone v0.0.0-20171017000000-482157b86ccb239d6172d85b15dd0025c51f605d/go.mod h1:J86XzS1wgzJPjpQmpriJ+SetP17JSQUd9l+HWQK86jA=
+github.com/aaronland/go-image-cli v0.0.0-20200215210625-1d5c6b5433a2 h1:5TYkO2oa5Lw+PmpoqLFFd2MFMB7h3rYixciyIgxZHj0=
+github.com/aaronland/go-image-cli v0.0.0-20200215210625-1d5c6b5433a2/go.mod h1:h+6rzbhBHVZ4i3OFC4pJNPHnMb7yvHDOEhjoU2lLgws=
+github.com/aaronland/go-image-cli v0.0.0-20200215210826-37fdffc63da5 h1:68kx+lWliM/T11rlXLzq99mJzzKFP70oA4j2JEUj/3w=
+github.com/aaronland/go-image-cli v0.0.0-20200215210826-37fdffc63da5/go.mod h1:h+6rzbhBHVZ4i3OFC4pJNPHnMb7yvHDOEhjoU2lLgws=
 github.com/aaronland/go-image-decode v0.0.0-20200215193808-094468d44f17/go.mod h1:dOMo+O8DdvO05WCjW7Z1Yj2F9nmTncwIgij2rFMVSUQ=
 github.com/aaronland/go-image-decode v0.0.1 h1:X624G0eAAj8tu/pwuA01MY4wxB9sryv6hhzJrdVZo7g=
 github.com/aaronland/go-image-decode v0.0.1/go.mod h1:dOMo+O8DdvO05WCjW7Z1Yj2F9nmTncwIgij2rFMVSUQ=

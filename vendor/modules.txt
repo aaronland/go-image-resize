@@ -1,3 +1,5 @@
+# github.com/aaronland/go-image-cli v0.0.0-20200215210826-37fdffc63da5
+github.com/aaronland/go-image-cli
 # github.com/aaronland/go-image-decode v0.0.1
 github.com/aaronland/go-image-decode
 # github.com/aaronland/go-image-encode v0.0.0-20200215191655-047f61aedbfe

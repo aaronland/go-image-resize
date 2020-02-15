@@ -1,19 +1,15 @@
 package main
 
 import (
-	"bufio"
-	"bytes"
 	"context"
 	"flag"
 	"fmt"
-	"github.com/aaronland/go-image-decode"
-	"github.com/aaronland/go-image-encode"
 	"github.com/aaronland/go-image-resize"
-	"github.com/natefinch/atomic"
+	"github.com/aaronland/go-image-cli"	
 	"log"
-	"os"
 	"path/filepath"
 	"strings"
+	"image"
 )
 
 func main() {
@@ -24,38 +20,12 @@ func main() {
 
 	ctx := context.Background()
 
-	dec, err := decode.NewDecoder(ctx, "image://")
+	cb := func(ctx context.Context, im image.Image, path string) (image.Image, string, error) {
 
-	if err != nil {
-		log.Fatal(err)
-	}
-
-	paths := flag.Args()
-
-	for _, path := range paths {
-
-		// START OF something like go-image-reader
-		
-		fh, err := os.Open(path)
+		new_im, err := resize.ResizeImageMax(ctx, im, *max)
 
 		if err != nil {
-			log.Fatal(err)
-		}
-
-		defer fh.Close()
-
-		im, format, err := dec.Decode(ctx, fh)
-
-		if err != nil {
-			log.Fatal(err)
-		}
-
-		// END OF something like go-image-reader
-		
-		im, err = resize.ResizeImageMax(ctx, im, *max)
-
-		if err != nil {
-			log.Fatal(err)
+			return nil, "", err
 		}
 
 		root := filepath.Dir(path)
@@ -67,38 +37,16 @@ func main() {
 		new_name := fmt.Sprintf("%s-%d%s", short_name, *max, ext)
 
 		new_path := filepath.Join(root, new_name)
-
-		// START OF something like go-image-writer
 		
-		enc_uri := fmt.Sprintf("%s://", format)
-		enc, err := encode.NewEncoder(ctx, enc_uri)
+		return new_im, new_path, nil
+	}
 
-		if err != nil {
-			log.Fatal(err)
-		}
+	paths := flag.Args()
+	
+	err := cli.Process(ctx, cb, paths...)
 
-		var buf bytes.Buffer
-		wr := bufio.NewWriter(&buf)
-
-		err = enc.Encode(ctx, im, wr)
-
-		if err != nil {
-			log.Fatal(err)
-		}
-
-		wr.Flush()
-
-		br := bytes.NewReader(buf.Bytes())
-
-		err = atomic.WriteFile(new_path, br)
-
-		if err != nil {
-			log.Fatal(err)
-		}
-
-		// END OF something like go-image-writer
-
-		log.Println(new_path)
+	if err != nil {
+		log.Fatal(err)
 	}
 
 }
