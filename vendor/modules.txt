@@ -4,9 +4,9 @@ github.com/aaronland/go-image-cli
 github.com/aaronland/go-image-decode
 # github.com/aaronland/go-image-encode v0.0.0-20200215191655-047f61aedbfe
 github.com/aaronland/go-image-encode
-# github.com/aaronland/go-image-transform v0.0.0-20200215193528-9bb7b64c2728
+# github.com/aaronland/go-image-transform v0.0.0-20201125043008-ea524ffbd26f
 github.com/aaronland/go-image-transform
-# github.com/aaronland/go-roster v0.0.1
+# github.com/aaronland/go-roster v0.0.2
 github.com/aaronland/go-roster
 # github.com/natefinch/atomic v0.0.0-20150920032501-a62ce929ffcc
 github.com/natefinch/atomic
