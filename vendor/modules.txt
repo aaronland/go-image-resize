@@ -1,14 +1,36 @@
 # github.com/aaronland/go-image-cli v0.0.0-20200215210826-37fdffc63da5
+## explicit; go 1.12
 github.com/aaronland/go-image-cli
 # github.com/aaronland/go-image-decode v0.0.1
+## explicit; go 1.12
 github.com/aaronland/go-image-decode
 # github.com/aaronland/go-image-encode v0.0.0-20200215191655-047f61aedbfe
+## explicit; go 1.12
 github.com/aaronland/go-image-encode
 # github.com/aaronland/go-image-transform v0.0.0-20201125043008-ea524ffbd26f
+## explicit; go 1.12
 github.com/aaronland/go-image-transform
 # github.com/aaronland/go-roster v0.0.2
+## explicit; go 1.12
 github.com/aaronland/go-roster
+# github.com/mandykoh/go-parallel v0.1.0
+## explicit; go 1.15
+github.com/mandykoh/go-parallel
+# github.com/mandykoh/prism v0.35.1
+## explicit; go 1.14
+github.com/mandykoh/prism
+github.com/mandykoh/prism/adobergb
+github.com/mandykoh/prism/cielab
+github.com/mandykoh/prism/ciexyy
+github.com/mandykoh/prism/ciexyz
+github.com/mandykoh/prism/displayp3
+github.com/mandykoh/prism/linear
+github.com/mandykoh/prism/linear/lut
+github.com/mandykoh/prism/matrix
+github.com/mandykoh/prism/srgb
 # github.com/natefinch/atomic v0.0.0-20150920032501-a62ce929ffcc
+## explicit
 github.com/natefinch/atomic
 # github.com/nfnt/resize v0.0.0-20180221191011-83c6a9932646
+## explicit
 github.com/nfnt/resize
